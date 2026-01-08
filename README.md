@@ -1,7 +1,7 @@
 
-<!-- <p align="center">
-    <a href="https://ibb.co/chqfBqxv"><img src="/example/model/fossyl_logos.png" width="60%"></a> <br>
-</p> -->
+<p align="center">
+    <a href="https://ibb.co/pvx3rgVs"><img src="/example/xcavation.png" width="60%"></a> <br>
+</p>
 
 <h1 align="center" id="title"> 🪏 <b> Xcavation </b> 🪏 </h1>
 
