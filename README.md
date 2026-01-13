@@ -7,7 +7,7 @@
 
 [![PyPi](https://img.shields.io/pypi/v/xcavation)](https://pypi.org/project/xcavation/)
 
-[![PyPi - Downloads](https://img.shields.io/pypi/dm/xcavation)]
+[![PyPi - Downloads](https://img.shields.io/pypi/dm/xcavation)](https://pypistats.org/packages/xcavation)
 
 <h1 align="center" id="title"> 🪏 <b> Xcavation </b> 🪏 </h1>
 
