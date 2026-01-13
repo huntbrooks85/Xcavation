@@ -1,7 +1,13 @@
 
 <p align="center">
-    <a href="https://ibb.co/pvx3rgVs"><img src="/example/xcavation.png" width="60%"></a> <br>
+    <a href="https://ibb.co/pvx3rgVs"><img src="/misc/xcavation.png" width="60%"></a> <br>
 </p>
+
+[![SPHEREx](https://img.shields.io/badge/SPHEREx-QR2-green)](https://irsa.ipac.caltech.edu/data/SPHEREx/docs/overview_qr.html)
+
+[![PyPi](https://img.shields.io/pypi/v/xcavation)](https://pypi.org/project/xcavation/)
+
+[![PyPi - Downloads](https://img.shields.io/pypi/dm/xcavation)]
 
 <h1 align="center" id="title"> 🪏 <b> Xcavation </b> 🪏 </h1>
 
