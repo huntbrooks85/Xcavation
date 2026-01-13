@@ -1,6 +1,6 @@
 
 <p align="center">
-    <a href="https://ibb.co/pvx3rgVs"><img src="/misc/xcavation-logo.png" width="100%"></a> <br>
+    <a href="https://ibb.co/pvx3rgVs"><img src="/misc/xcavation-logo.png" width="180%"></a> <br>
 </p>
 
 <p align="center">
