@@ -1,6 +1,6 @@
 
 <p align="center">
-    <a href="https://ibb.co/pvx3rgVs"><img src="/misc/xcavation.png" width="100%"></a> <br>
+    <a href="https://ibb.co/pvx3rgVs"><img src="/misc/xcavation-logo.png" width="100%"></a> <br>
 </p>
 
 <p align="center">
@@ -14,8 +14,6 @@
     <img src="https://img.shields.io/pypi/dm/xcavation" alt="PyPI downloads">
   </a>
 </p>
-
-<h1 align="center" id="title" style="font-size: 5em;"> 🧱 <b> xcavation </b> 🧱 </h1>
 
 <div align="center">
   <p id="description" > <b>Xcavation</b> is a Python package for rapid forced-photometry calculations of <a href="https://spherex.caltech.edu/">SPHEREx</a> QR2 spectral data. It uses the <code>astroquery.irsa</code> package to access <a href="https://spherex.caltech.edu/">SPHEREx</a> images through the IRSA API. Both aperture and PSF photometry are supported and include multi-threading for improved performance.  </p>
