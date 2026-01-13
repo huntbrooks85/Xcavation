@@ -3,11 +3,17 @@
     <a href="https://ibb.co/pvx3rgVs"><img src="/misc/xcavation.png" width="60%"></a> <br>
 </p>
 
-[![SPHEREx](https://img.shields.io/badge/SPHEREx-QR2-green)](https://irsa.ipac.caltech.edu/data/SPHEREx/docs/overview_qr.html)
-
-[![PyPi](https://img.shields.io/pypi/v/xcavation)](https://pypi.org/project/xcavation/)
-
-[![PyPi - Downloads](https://img.shields.io/pypi/dm/xcavation)](https://pypistats.org/packages/xcavation)
+<p align="center">
+  <a href="https://irsa.ipac.caltech.edu/data/SPHEREx/docs/overview_qr.html">
+    <img src="https://img.shields.io/badge/SPHEREx-QR2-green" alt="SPHEREx QR2">
+  </a>
+  <a href="https://pypi.org/project/xcavation/">
+    <img src="https://img.shields.io/pypi/v/xcavation" alt="PyPI version">
+  </a>
+  <a href="https://pypistats.org/packages/xcavation">
+    <img src="https://img.shields.io/pypi/dd/xcavation" alt="PyPI downloads">
+  </a>
+</p>
 
 <h1 align="center" id="title"> 🪏 <b> Xcavation </b> 🪏 </h1>
 
