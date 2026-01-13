@@ -4,7 +4,7 @@
 # USE APERTURE.PY INSTEAD FOR NOW
 
 #-----------------------------------------------------------------------#
-# xcavation.psf v0.2.1
+# xcavation.psf v0.3.0
 # By Hunter Brooks, at UToledo, Toledo: Jan. 13, 2026
 #
 # Purpose: Perform PSF Photometry on SphereX Data

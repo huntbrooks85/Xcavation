@@ -1,6 +1,6 @@
 
 #-----------------------------------------------------------------------#
-# xcavation.quality v0.2.1
+# xcavation.quality v0.3.0
 # By Hunter Brooks, at UToledo, Toledo: Jan. 13, 2026
 #
 # Purpose: Plotting Tools for SphereX Data
