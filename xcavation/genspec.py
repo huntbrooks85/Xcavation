@@ -1,7 +1,7 @@
 
 #-----------------------------------------------------------------------#
-# xcavation.genspec v0.1.0
-# By Hunter Brooks, at UToledo, Toledo: Feb. 5, 2026
+# xcavation.genspec v0.2.0
+# By Hunter Brooks, at UToledo, Toledo: Jan. 13, 2026
 #
 # Purpose: Main API Function for SphereX Data Retrieval and Photometry
 #-----------------------------------------------------------------------#
@@ -44,9 +44,10 @@ from concurrent.futures import ThreadPoolExecutor
 
 
 
+
 # Multi-Thread the SphereX Query Function
 # ------------------------------------------------------ #
-def genspec(ra, dec, style, pmra=None, pmdec=None, mjd = None, verification = False, threads = 8):
+def Xcavation(ra, dec, style, pmra=None, pmdec=None, mjd = None, verification = False, threads = 8):
 
     # ----- Proper Motion Propagation ----- #
     if pmra is not None and pmdec is not None:

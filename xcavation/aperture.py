@@ -1,7 +1,7 @@
 
 #-----------------------------------------------------------------------#
-# xcavation.aperture v0.1.0
-# By Hunter Brooks, at UToledo, Toledo: Feb. 5, 2026
+# xcavation.aperture v0.2.0
+# By Hunter Brooks, at UToledo, Toledo: Jan. 13, 2026
 #
 # Purpose: Perform Aperture Photometry on SphereX Data
 #-----------------------------------------------------------------------#
@@ -38,16 +38,18 @@ from io import BytesIO
 # Wavelength Resolving Power Table
 # ------------------------------------------------------ #
 def resolving_table(wave):
-  if 0.75 <= wave < 2.42:
+  if wave < 2.42:
     R = 41
   elif 2.42 <= wave < 3.82:
     R = 35
   elif 3.82 <= wave < 4.42:
     R = 110
-  elif 4.42 <= wave <= 5:
+  elif 4.42 <= wave:
     R = 130
+
   return wave/R
 # ------------------------------------------------------ #
+
 
 
 
@@ -65,7 +67,6 @@ def spherex_aperature_phot(url, coord, pixel_scale_deg=0.001708333):
 
     # Opens File
     with fits.open(file_bytes, memmap=False, lazy_load_hdus=True, ignore_missing_simple=True, checksum=False) as hdul:
-
 
 
         # ---------------- WCS ---------------- #
@@ -173,7 +174,7 @@ def spherex_aperature_phot(url, coord, pixel_scale_deg=0.001708333):
     # Return Output Dictionary
     return {
         "wavelength": wave_point,
-        "delta_lamda": resolving_table(wave_point),
+        "delta_lambda": resolving_table(wave_point),
         "flux": flux_ap,
         "flux_err": flux_err,
         "flux_cutout": flux_ujy,
