@@ -1,6 +1,6 @@
 
 #-----------------------------------------------------------------------#
-# xcavation.motion v0.2.0
+# xcavation.motion v0.2.1
 # By Hunter Brooks, at UToledo, Toledo: Jan. 13, 2026
 #
 # Purpose: Propogate celestial coordinates using proper motion

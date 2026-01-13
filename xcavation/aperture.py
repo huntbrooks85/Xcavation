@@ -1,6 +1,6 @@
 
 #-----------------------------------------------------------------------#
-# xcavation.aperture v0.2.0
+# xcavation.aperture v0.2.1
 # By Hunter Brooks, at UToledo, Toledo: Jan. 13, 2026
 #
 # Purpose: Perform Aperture Photometry on SphereX Data
