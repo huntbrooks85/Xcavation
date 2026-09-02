@@ -1,7 +1,7 @@
 
 #-----------------------------------------------------------------------#
-# xcavation.aperture v1.0.2
-# By Hunter Brooks, at UToledo, Toledo: Apr. 08, 2026
+# xcavation.aperture v1.1.0
+# By Hunter Brooks, at UToledo, Toledo: Sep. 02, 2026
 #
 # Purpose: Perform Aperture Photometry on SphereX Data
 #-----------------------------------------------------------------------#
@@ -42,49 +42,6 @@ from photutils.aperture import CircularAperture, CircularAnnulus, aperture_photo
 import requests
 from io import BytesIO
 # ------------------------------------------------------ #
-
-
-
-
-# Table of Resolving Powers Based on Wavelength
-# ------------------------------------------------------ #
-def resolving_table(wave):
-  """
-  Return the spectral resolution element (Δλ) for a given wavelength
-  based on the SPHEREx instrument resolving powers. The resolving power,
-  R = λ / Δλ, is taken from Akeson et al. (2025):
-  https://irsa.ipac.caltech.edu/data/SPHEREx/docs/SPHEREx_Expsupp_QR_v1.0.pdf.
-
-  Parameters
-  ----------
-    wave: Wavelength inputted to find corresponding R value (float)
-
-  Returns
-  -------
-    delta_lambda: Spectral wavelength resolution at a given wavelength (float)
-  """
-
-
-  # ----- Table of R Values ----- #
-  # Use Inputted Wavelength to Find Relevant R value
-  if wave < 1.11:
-    R = 39
-  if 1.11 <= wave < 2.42:
-    R = 41
-  elif 2.42 <= wave < 3.82:
-    R = 35
-  elif 3.82 <= wave < 4.42:
-    R = 110
-  elif 4.42 <= wave:
-    R = 130
-  # ----------------------------- #
-
-
-
-  # Calculate Delta Lambda Using Wavelength and R Value
-  return wave/R
-# ------------------------------------------------------ #
-
 
 
 
@@ -379,14 +336,14 @@ def spherex_aperature_phot(url_og, coord, pm, mjd,  # Coords
         # ----- Wavelength ----- #
         # General Set-Up
         y, x = np.indices(hdul["IMAGE"].data.shape) # Obtain Detector Size
-        wave, *_ = spectral_wcs.pixel_to_world(x, y) # Wavelength WCS
-        wave = np.asarray(wave) # Make Wavelength Arrary
+        wave, bandwidth = spectral_wcs.pixel_to_world(x, y) # Wavelength WCS
+        wave, bandwidth = np.asarray(wave), np.asarray(bandwidth) # Make Wavelength/Bandwidth Arrary
 
         # Obtains Wavelength Average
         x_query_total, y_query_total = celestial_wcs.world_to_pixel(coord)
         y = int(np.clip(y_query_total, 0, wave.shape[0] - 1))
         x = int(np.clip(x_query_total, 0, wave.shape[1] - 1))
-        wave_point = wave[y, x] # Wavelength
+        wave_point, band_point = wave[y, x], bandwidth[y, x] # Wavelength/Bandwidth
         # ---------------------- #
     # ------------------------------------------- #
 
@@ -406,7 +363,7 @@ def spherex_aperature_phot(url_og, coord, pm, mjd,  # Coords
     # ----- Output Dictionary ----- #
     return {
         "wavelength": wave_point,
-        "delta_lambda": resolving_table(wave_point),
+        "delta_lambda": band_point,
         "flux": flux_ap,
         "flux_err": flux_err,
         "flag_count": total_bit_counts,

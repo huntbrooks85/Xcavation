@@ -1,7 +1,7 @@
 
 #-----------------------------------------------------------------------#
-# xcavation.motion v1.0.2
-# By Hunter Brooks, at UToledo, Toledo: Apr. 08, 2026
+# xcavation.motion v1.1.0
+# By Hunter Brooks, at UToledo, Toledo: Sep. 02, 2026
 #
 # Purpose: Propagate celestial coordinates using proper motion
 #-----------------------------------------------------------------------#

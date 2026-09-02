@@ -1,7 +1,7 @@
 
 #-----------------------------------------------------------------------#
-# xcavation.genspec v1.0.2
-# By Hunter Brooks, at UToledo, Toledo: Apr. 08, 2026
+# xcavation.genspec v1.1.0
+# By Hunter Brooks, at UToledo, Toledo: Sep. 02, 2026
 #
 # Purpose: Main API Function for SphereX Data Retrieval and Photometry
 #-----------------------------------------------------------------------#
@@ -579,7 +579,7 @@ def genspec(ra, dec, config: genspec_profile):
           f.write(f'# RA: {ra}\n')
           f.write(f'# Dec: {dec}\n')
           f.write(f'# Wavelength Range: {round(np.nanmin(output['mjd']), 3)} to {round(np.nanmax(output['mjd']), 3)}\n')
-          f.write(f'# Spectral resolution (Δλ/λ): 35 – 130\n')
+          f.write(f'# Delta Lambda: {np.nanmin(delta_lambda)} - {np.nanmax(delta_lambda)}\n')
           f.write(f'# Number of images measured: {len(urls)}\n')
           f.write(f'# Photometry Type: Aperture\n')
           f.write(f'# Average SNR: {round(np.nanmean(output['flux']/output['flux_err']), 2)}\n')

@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: xcavation
-Version: 1.0.2
+Version: 1.1.0
 Summary: SPHEREx Data Retrieval and Photometry Toolkit
 Home-page: https://github.com/huntbrooks85/xcavation
 Author: Hunter Brooks
@@ -51,7 +51,7 @@ Dynamic: summary
 [![SPHEREx QR2](https://img.shields.io/badge/SPHEREx-QR2-green)](https://irsa.ipac.caltech.edu/data/SPHEREx/docs/overview_qr.html)
 [![PyPI version](https://img.shields.io/pypi/v/xcavation)](https://pypi.org/project/xcavation/)
 [![PyPI downloads](https://img.shields.io/pypi/dm/xcavation)](https://pypistats.org/packages/xcavation)
-[![DOI](https://img.shields.io/badge/DOI-10.5281/zenodo.19477136-blue)](https://doi.org/10.5281/zenodo.19477136)
+[![DOI](https://img.shields.io/badge/DOI-10.5281/zenodo.19477227-blue)](https://doi.org/10.5281/zenodo.19477227)
 </p>
 </div>
 
@@ -167,7 +167,7 @@ Dynamic: summary
 
 ### Output Variables:
 1.  <code>wavelength</code>: Wavelength of a queried position: $\mu m$: <code> float </code>
-2.  <code>delta_lambda</code>: The resolving power solution ($\Delta \lambda = \frac{\lambda}{R}$) from Table 2 of [Akeson et al. (2025)](https://irsa.ipac.caltech.edu/data/SPHEREx/docs/SPHEREx_Expsupp_QR_v1.0.pdf): $\mu m$: <code> float </code>
+2.  <code>delta_lambda</code>: The resolving power solution: $\mu m$: <code> float </code>
 3.  <code>flux</code>: Flux from the given aperture photometry: $\mu Jy$: <code> float </code>
 4.  <code>flux_err</code>: Flux error from the given aperture photometry: $\mu Jy$: <code> float </code>
 5. <code>flag_count</code>: Dictionary of every bit measured in the aperture
@@ -222,7 +222,7 @@ df = genspec(ra, dec, config = user_config)
   <h2 style="font-size: 2em;">📖 Acknowledgments 📖</h2>
 </div>
 
-1. If you intend to publish any calculations done by xcavation, please reference Brooks et al. (in prep.).
+1. If you intend to publish any calculations done by xcavation, please reference https://iopscience.iop.org/article/10.3847/2515-5172/ae6257.
 
 2. Please reference the relevant [SPHEREx citations](https://spherex.caltech.edu/page/publications).
 

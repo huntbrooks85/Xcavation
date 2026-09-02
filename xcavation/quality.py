@@ -1,7 +1,7 @@
 
 #-----------------------------------------------------------------------#
-# xcavation.quality v1.0.2
-# By Hunter Brooks, at UToledo, Toledo: Apr. 08, 2026
+# xcavation.quality v1.1.0
+# By Hunter Brooks, at UToledo, Toledo: Sep. 02, 2026
 #
 # Purpose: Plotting Tools for SphereX Data
 #-----------------------------------------------------------------------#
@@ -56,12 +56,12 @@ def finder_chart(output, pdf_path):
   ----------
     output: dict
         Dictionary containing SPHEREx photometry:
-        - 'flux_cutout': list of 2D flux arrays (μJy)
+        - 'flux_cutout': list of 2D flux arrays (microJy)
         - 'aperture': list of 2D aperture masks
         - 'annulus': list of 2D annulus masks
         - 'x_loc', 'y_loc': lists of pixel coordinates of the target in cutouts
-        - 'wavelength': list or array of wavelengths (μm)
-        - 'flux': list of aperture flux values (μJy)
+        - 'wavelength': list or array of wavelengths (micron)
+        - 'flux': list of aperture flux values (microJy)
         - 'ap_radius', 'inner_annulus', 'outer_annulus': lists of radii in arcsec
     pdf_path: File path where the PDF finder chart will be saved (str)
 
@@ -151,7 +151,7 @@ def finder_chart(output, pdf_path):
         ax.add_patch(out_an) # Outer Annulus
 
         # General Subplot Looks
-        ax.set_title(f"$λ$: {wavelength:.4f} μm and $F_ν$: {flux:.0f} μJy", fontsize=12)
+        ax.set_title(f"lambda: {wavelength:.4f} micron and F: {flux:.0f} microJy", fontsize=12)
         ax.axis('off') # Turn off axis
         valid_count += 1 # Counts Valid Plots
   # ------------------------------------------ #
@@ -190,9 +190,9 @@ def spectra_plot(output):
   ----------
     output : dict
         Dictionary containing SPHEREx photometry results. Expected keys:
-        - 'wavelength': list or array of wavelengths in microns (μm)
-        - 'flux': list or array of flux values in μJy
-        - 'flux_err': list or array of flux uncertainties in μJy
+        - 'wavelength': list or array of wavelengths in microns (micron)
+        - 'flux': list or array of flux values in microJy
+        - 'flux_err': list or array of flux uncertainties in microJy
 
   Returns
   -------
@@ -245,8 +245,8 @@ def spectra_plot(output):
   # ------- Make Plot Pretty ------- #
   plt.colorbar(sc, label='Flag Count') # Colorbar
 
-  plt.xlabel("Wavelength [μm]", fontsize=14) # X Label
-  plt.ylabel("Flux [μJy]", fontsize=14) # Y Label
+  plt.xlabel("Wavelength [micron]", fontsize=14) # X Label
+  plt.ylabel("Flux [microJy]", fontsize=14) # Y Label
 
   plt.grid(alpha=0.2) # Plot Grid
   plt.minorticks_on() # Plot Minor Tickmarks

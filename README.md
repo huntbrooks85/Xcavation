@@ -125,7 +125,7 @@
 
 ### Output Variables:
 1.  <code>wavelength</code>: Wavelength of a queried position: $\mu m$: <code> float </code>
-2.  <code>delta_lambda</code>: The resolving power solution ($\Delta \lambda = \frac{\lambda}{R}$) from Table 2 of [Akeson et al. (2025)](https://irsa.ipac.caltech.edu/data/SPHEREx/docs/SPHEREx_Expsupp_QR_v1.0.pdf): $\mu m$: <code> float </code>
+2.  <code>delta_lambda</code>: The resolving power solution: $\mu m$: <code> float </code>
 3.  <code>flux</code>: Flux from the given aperture photometry: $\mu Jy$: <code> float </code>
 4.  <code>flux_err</code>: Flux error from the given aperture photometry: $\mu Jy$: <code> float </code>
 5. <code>flag_count</code>: Dictionary of every bit measured in the aperture
